@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>A Headache with Pictures!</title>
+		<!-- datepicker source: https://jqueryui.com/datepicker/ -->
+		<script src="../php/js/jquery.js"></script>
+  		<script src="../php/js/jquery-ui.js"></script>
+  		<script>
+  			$(function() {
+    			$( "#datepicker" ).datepicker();
+  			});
+  		</script>
+	</head>
+	<body>
+		<form action="../php/violinForm.php" method="post">
+			Date:<br>
+			<input type="text" name="practiceDate" placeholder="yyyy/mm/dd" id="datepicker" autofocus>
+			<br>
+			Duration:<br>
+			<input type="text" name="practiceDuration" placeholder="##">
+			<br><br>
+			<input type="submit" value="Submit">
+			
+		</form>
+	</body>
+</html>
