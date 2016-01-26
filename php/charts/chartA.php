@@ -29,16 +29,17 @@
                 ]
             };
 
+            //var myNewChart;
             function page_startup(){
                 /*global Chart*/
                 var ctx = document.getElementById("myChart").getContext("2d");
-                //var myNewChart = 
-                new Chart(ctx).Line(data);
+                var myNewChart = new Chart(ctx).Line(data, {bezierCurve: false});
+                document.getElementById("placeLegendHere").innerHTML = myNewChart.generateLegend();
             }
         </script>
     </head>
     <body onload="page_startup();">
         <canvas id="myChart" width="600" height="400"></canvas>
-
+        <div id="placeLegendHere"></div>
     </body>
 </html>
