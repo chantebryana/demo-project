@@ -1,6 +1,6 @@
 dataArray = []
-limit = 3
-7.times {dataArray << rand(1..limit)}
+limit = 10
+47.times {dataArray << rand(1..limit)}
 dataArray.sort!
 print "dataArray: " + dataArray.join(", ") + "\n"
 
@@ -13,4 +13,6 @@ dataArray.each do |element|
     end 
 end
 
+print "tallyArray elements: "
 tallyArray.each do |i| print i.to_s + " " end 
+print "\n"
