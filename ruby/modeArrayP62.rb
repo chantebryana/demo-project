@@ -1,9 +1,10 @@
 dataArray = []
-7.times {dataArray << rand(1..3)}
+limit = 3
+7.times {dataArray << rand(1..limit)}
 dataArray.sort!
 print "dataArray: " + dataArray.join(", ") + "\n"
 
-tallyArray = Array.new(3, 0)
+tallyArray = Array.new(limit, 0)
 mode = 0
 
 dataArray.each do |element|
