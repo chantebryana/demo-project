@@ -1,7 +1,6 @@
 dataArray = []
 limit = 10
 47.times {dataArray << rand(1..limit)}
-#dataArray = [1, 2, 3, 4, 5, 3, 3, 3, 3, 4, 4]
 dataArray.sort!
 print "dataArray: " + dataArray.join(", ") + "\n"
 
@@ -10,14 +9,12 @@ mode = 0
 runningTally = 0
 
 dataArray.each do |element|
-    if element
-        tallyArray[element-1] += 1
-    end 
+    tallyArray[element-1] += 1
 end
 
 print "tallyArray printout: \n"
 tallyArray.each_with_index do |e, i| 
-    print "index " + i.to_s + ", element " + e.to_s + "\n"
+    print "the number " + (i+1).to_s + " occurs " + e.to_s + " time(s)\n"
 end 
 
 tallyArray.each_with_index do |element, index|
