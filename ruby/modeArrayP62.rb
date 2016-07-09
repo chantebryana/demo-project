@@ -3,7 +3,7 @@ def modeTrials (range, reps)
     limit = range
     reps.times {dataArray << rand(1..limit)}
     dataArray.sort!
-    print "dataArray: " + dataArray.join(", ") + "\n"
+#    print "dataArray: " + dataArray.join(", ") + "\n"
     
     tallyArray = Array.new(limit, 0)
     mode = 0
@@ -13,10 +13,10 @@ def modeTrials (range, reps)
         tallyArray[element-1] += 1
     end
     
-    print "tallyArray printout: \n"
-    tallyArray.each_with_index do |e, i| 
-        print "the number " + (i+1).to_s + " occurs " + e.to_s + " time(s)\n"
-    end 
+#    print "tallyArray printout: \n"
+#    tallyArray.each_with_index do |e, i| 
+#        print "the number " + (i+1).to_s + " occurs " + e.to_s + " time(s)\n"
+#    end 
     
     tallyArray.each_with_index do |element, index|
         if element > runningTally 
@@ -24,7 +24,8 @@ def modeTrials (range, reps)
             mode = index + 1
         end 
     end
-    print "mode equals the number " + mode.to_s + "\n"
+#    print "mode equals the number " + mode.to_s + "\n"
+    return mode
 end
 
-modeTrials(10, 47)
+puts "Here's your mode: " + modeTrials(10, 47).to_s + "\n"
