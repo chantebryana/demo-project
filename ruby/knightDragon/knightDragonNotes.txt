@@ -1,0 +1,34 @@
+define initial conditions
+- dragonHP = 50
+- knightHP = 20
+- random number generator = 1..6 (whole numbers)
+
+- print out setting / environment; player's HP
+- "knight entering a cave with smoldering dragon breath coming out. Knight HP = " + knightHP + ". What would you like to do?/n Type /'FIGHT/', /'RUN/', or /'NEGOTIATE/', then press ENTER"
+
+choose your own adventure game
+- knight walks up to dragon
+1. fight
+2. run
+(3. negotiate)
+
+
+if [1 flight]
+  then
+  roll for damage
+    [have random number generator roll dice]
+    [define damage for dice roll; decrease HP]
+  define consequences
+    dragon retaliate: swipe back at knight
+      [have random number generator roll dice]
+      [define damage for dice roll; decrease HP]
+  break # [go back to user prompt: choose 1, 2, 3] 
+elsif [2 run away]
+  then
+  simply run away, no further action (for now..keep it simple)
+  break? # end encounter, it's all done
+elsif [3 negotiate]
+  then
+else 
+  error statement
+end

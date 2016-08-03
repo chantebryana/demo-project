@@ -21,3 +21,4 @@ def modeTrials (range, reps)
     return mode
 end
 
+ 
