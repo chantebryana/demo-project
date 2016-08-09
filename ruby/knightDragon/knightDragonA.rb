@@ -1,9 +1,6 @@
 dragonHP = 50
 knightHP = 20
 
-print "Knight enters Dragon's lair with " + knightHP.to_s + " HP. What would you like to do?\nType \'FIGHT\' or \'RUN\': "
-userChoice = gets.upcase.chomp 
-
 def choiceCheck (userChoice)
     if userChoice == "FIGHT" 
         print "Initiate fighting!\n"
@@ -13,5 +10,8 @@ def choiceCheck (userChoice)
         print "Your selection doesn't match any available options. Please try again.\n"
     end
 end 
+
+print "Knight enters Dragon's lair with " + knightHP.to_s + " HP. What would you like to do?\nType \'FIGHT\' or \'RUN\': "
+userChoice = gets.upcase.chomp 
 
 choiceCheck(userChoice) 
